@@ -1,8 +1,12 @@
-export default function Joke() {
+export default function Joke({ joke, onNextJoke }) {
+  // pure component
+  // input definiert zu 100% output => pure fuctions
   return (
     <>
-      <h1>Insert joke here</h1>
-      <button type="button">Next Joke</button>
+      <h2>{joke}</h2>
+      <button type="button" onClick={onNextJoke}>
+        Next Joke
+      </button>
     </>
   );
 }
